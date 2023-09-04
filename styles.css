@@ -1,0 +1,399 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    line-height: 1.5;
+}
+
+html {
+    color: black;
+    text-align: center;
+}
+
+body {
+    background-color: rgb(2, 2, 2);
+}
+
+@font-face {
+    font-family: 'belinda';
+    src: url('resources/font/FontsFree-Net-Belinda-W00-Regular-_1_.woff') format('woff'), 
+    url('resources/font/FontsFree-Net-Belinda-W00-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'brandon';
+    src: url('resources/font/Brandon-Grotesque-Font-Family/brandon-grotesque-regular-italic-58a8a456c4724.otf') format('otf');
+}
+
+/* Header */
+
+.header {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 4.375rem;
+    grid-template-columns: repeat(12, 8.33333333%);
+    border-bottom: 1px solid rgb(151, 230, 230);
+    background-color: azure;
+}
+
+.header a {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+}
+
+.left_header {
+    grid-area: 1 / 1 / span 1 / span 4;
+    text-align: left;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.center_header {
+    grid-area: 1 / 5 / span 1 / span 4;
+}
+
+.right_header {
+    grid-area: 1/ 9 / span 1 / span 4;
+    text-align: left;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media only screen and (max-width: 871px) {
+    .left_header {
+        display: none;
+    }
+    .center_header {
+        grid-area: 1 / 1 / span 1 / span 4;
+    }
+    .right_header {
+        grid-area: 1/ 6 / span 1 / span 6;
+        justify-content: space-between;
+    }
+}
+@media only screen and (max-width: 588px) {
+    .center_header {
+        display: none;
+    }
+    .right_header {
+        grid-area: 1/ 2 / span 1 / span 11;
+        justify-content: space-between;
+    }
+}
+
+/* Header */
+
+/* banner */
+
+.banner {
+    grid-template-rows: repeat(5, 3.125rem);
+    grid-template-columns: repeat(12, 8.33333333%);
+    background-color: black;
+}
+.banner video {
+    grid-area: 1 / 1 / span 5 / span 12;
+    max-width: 100%;
+}
+/* banner */
+
+
+/* missionxabout */
+
+.missionxabout {
+    display: grid;
+    grid-template-rows: repeat(15, 3.125rem);
+    grid-template-columns: repeat(20, 5%);
+    background-image: url(resources/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.mission {
+    grid-area: 4 / 8 / span 12 / span 17;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 3.125rem 30%;
+    box-shadow: 5px 3px 5px 3px gainsboro;
+    background-color: azure;
+    padding: 5%;
+    
+}
+
+.mission p, .about p {
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    font-family: 'brandon', sans-serif;
+}
+
+.missionxabout h2 {
+    font-family: 'belinda', sans-serif;
+    text-transform: capitalize;
+    font-size: 1.875rem;
+}
+
+.about {
+    grid-area: 1 / 2 / span 14 / span 15;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 3.125rem 30%;
+    box-shadow: 5px 3px 5px 3px gainsboro;
+    background-color: azure;
+    padding: 3%;
+}
+
+@media only screen and (max-width: 1137px) {
+    .missionxabout {
+        display: flex; 
+        justify-content: center;
+        flex-direction: column;
+        max-width: 100%;
+    }  
+}
+
+/* missionxabout */
+
+/* event */
+
+.event {
+    height: 900px;
+    display: grid;
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: repeat(20, 1fr);
+    border-bottom: 1px solid red;
+}
+
+.event h1 {
+    font-family: 'belinda', sans-serif;
+    text-transform: capitalize;
+    font-size: 1.975rem;
+    color: rgb(116, 214, 214);
+    letter-spacing: 3px;
+}
+
+.box {
+    box-shadow: 5px 3px rgb(144, 206, 185);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    opacity: .9;
+    padding: 5%;
+}
+
+#box1 {
+    grid-area: 2 / 4 / span 8 / span 4;
+    background-image: url(resources/rando.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#box2 {
+    grid-area: 2 / 9 / span 8 / span 4;
+    background-image: url(resources/team_building.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#box3 {
+    grid-area: 2 / 14 / span 8 / span 4;
+    background-image: url(resources/ian-schneider-TamMbr4okv4-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#box4 {
+    grid-area: 11 / 3 / span 8 / span 4;
+    background-image: url(resources/vasily-koloda-8CqDvPuo_kI-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#box5 {
+    grid-area: 11 / 8 / span 8 / span 4;
+    background-image: url(resources/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#box6 {
+    grid-area: 11 / 13 / span 8 / span 4;
+    background-image: url(resources/austin-distel-rxpThOwuVgE-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.button {
+    border-radius: 5px;
+    background-color: blueviolet;
+    width: 100%;
+    box-shadow: 2px 3px rgb(154, 154, 158);
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    color: aliceblue;
+}
+
+@media only screen and (max-width: 1551px) {
+    .event {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 5%;
+        padding: 5%;
+    }
+    .box {    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 25%;
+        padding: 2%;
+    }
+    .button {
+        width: 100%;}
+}
+
+/* event */
+
+/* staff */
+
+.staff {
+    display: grid;
+    grid-template-rows: repeat(35, 50px);
+    grid-template-columns: repeat(25, 1fr);
+    gap: 10px;
+}
+
+.title {
+    grid-area: 2 / 1 / span 4 / span 25;
+    text-align: center;
+    font-family: 'belinda', sans-serif;
+    text-transform: capitalize;
+    font-size: 3.575rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+    padding-right: 87px;
+    color: rgb(127, 63, 187);
+}
+
+.pr {
+    grid-area: 4 / 11 / 13 / 15;
+    background-image: url(resources/library-of-congress-jPN_oglAjOU-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.vp_m {
+    grid-area: 12 / 8 / span 10 / 12;
+    background-image: url(resources/jodyhongfilms-sI1mbxJFFpU-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.vp_e {
+    grid-area: 12 / 14 / span 10 / 18;
+    background-image: url(resources/jodyhongfilms-sI1mbxJFFpU-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.vp_s {
+    grid-area: 12 / 3 / span 10 / 7;
+    background-image: url(resources/jodyhongfilms-sI1mbxJFFpU-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.vp_R {
+    grid-area: 12 / 19 / span 10 / 23;
+    background-image: url(resources/jodyhongfilms-sI1mbxJFFpU-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.a_m {
+    grid-area: 23 / 3 / span 10 / 7;
+    background-image: url(resources/jodyhongfilms-sI1mbxJFFpU-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.a_e {
+    grid-area: 23 / 8 / span 10 / 12;
+    background-image: url(resources/jodyhongfilms-sI1mbxJFFpU-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.a_s {
+    grid-area: 23 / 14 / span 10 / 18;
+    background-image: url(resources/jodyhongfilms-sI1mbxJFFpU-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.a_r {
+    grid-area: 23 / 19 / span 10 / 23;
+    background-image: url(resources/jodyhongfilms-sI1mbxJFFpU-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 1452px) {
+    .staff {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10%;
+        gap: 20px;
+    }
+    .title {
+        padding-right: 0px;
+    }
+    #box_1 {
+        height: 500px;
+    }
+}
+
+/* staff */
+
+footer {
+    color: seashell;
+    margin-top: auto;
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 50px;
+
+}
+
+footer h2 {
+    padding-left: 20px;
+    font-size: small;
+}
